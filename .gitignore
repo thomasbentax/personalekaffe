@@ -1,0 +1,13 @@
+# Secrets and local config — never commit these
+config.js
+.env
+.env.local
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# VS Code — allow shared settings and extension recommendations only
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
