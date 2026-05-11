@@ -42,16 +42,68 @@
 </head>
 <body>
 
-  <div class="prototype-banner">PROTOTYPE — IKKE PRODUKTION</div>
+  <div class="prototype-banner">PROTOTYPE til test — IKKE PRODUKTION</div>
 
   <nav>
     <img src="assets/img/logo-bentax.svg" alt="Bentax logo">
   </nav>
 
   <main>
-    <h1>Overskrift</h1>
-    <p>Beskriv hvad denne prototype gør.</p>
+    <h1>Tilmeld dig nyhedsbrev</h1>
+    <p>Modtag opdateringer via SMS eller email efter dit valgte interval.</p>
+
+    <form id="signupForm" class="signup-form">
+      <div class="form-group">
+        <label for="name">Navn *</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message" id="name-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefonnummer *</label>
+        <input type="tel" id="phone" name="phone" required>
+        <span class="error-message" id="phone-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="notificationType">Notifikationstype *</label>
+        <select id="notificationType" name="notificationType" required>
+          <option value="">Vælg en type</option>
+          <option value="sms">SMS</option>
+          <option value="email">Email</option>
+        </select>
+        <span class="error-message" id="notificationType-error"></span>
+      </div>
+
+      <fieldset class="form-group radio-group">
+        <legend>Frekvens *</legend>
+        <div class="radio-option">
+          <input type="radio" id="freq14" name="frequency" value="14" required>
+          <label for="freq14">Hver 14. dag</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="freq28" name="frequency" value="28" required>
+          <label for="freq28">Hver 28. dag</label>
+        </div>
+        <span class="error-message" id="frequency-error"></span>
+      </fieldset>
+
+      <button type="submit" class="submit-btn">Tilmeld mig</button>
+    </form>
+
+    <div id="successMessage" class="success-message" style="display: none;">
+      <h2>Tilmelding lykkedes!</h2>
+      <p>Tak for din tilmelding. Du vil modtage opdateringer snart.</p>
+    </div>
   </main>
 
+  <script src="config.js"></script>
+  <script src="assets/js/form.js" defer></script>
 </body>
 </html>

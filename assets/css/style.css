@@ -1,1 +1,134 @@
 /* Projektspecifik CSS */
+
+/* Form Styling */
+.signup-form {
+  max-width: 500px;
+  background: #D5CEC4;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label,
+.radio-group legend {
+  font-weight: 500;
+  color: #103B3D;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid #103B3D;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #333333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #D56729;
+  box-shadow: 0 0 0 3px rgba(213, 103, 41, 0.1);
+}
+
+.radio-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.radio-group .radio-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.radio-group input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  accent-color: #D56729;
+}
+
+.radio-group label {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.error-message {
+  color: #c0392b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.form-group.error input,
+.form-group.error select {
+  border-color: #c0392b;
+}
+
+.submit-btn {
+  background: #D56729;
+  color: #ffffff;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #c04d1a;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #999999;
+  cursor: not-allowed;
+}
+
+.success-message {
+  max-width: 500px;
+  background: #d4edda;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.success-message h2 {
+  color: #155724;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.success-message p {
+  color: #155724;
+}
